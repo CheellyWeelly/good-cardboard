@@ -25,6 +25,12 @@
         justify-content: space-between;                
         padding-top: 65px;
         padding-bottom: 60px;
+        @media (max-width:768px) {
+            text-align: center;
+            padding: 50px 0 0;
+            justify-content: center;         
+            }
+
         
     }
 
@@ -42,38 +48,63 @@
             z-index: -1;
             right: -15px;
         }
-        
+        @media (max-width:768px) {
+            display: none;   
+        }
     }
 
     &__desc { 
-        width: 535px;                          
+        width: 535px;
+                                  
         
         &-title {
             font-family: Roboto-Bold;
             font-size: 41px;
             font-weight: 700;
             margin-bottom: 10px;
+            @media (max-width:768px) {                
+                font-family: Roboto-Bold;
+                font-size: 22px;
+                font-weight: 700;
+                color: #ff9d00;                                 
+            }
+
         }
 
         &-subtitle {
             font-family: Roboto;
             font-size: 28px;
             font-weight: 400;
-
-        }
+            @media (max-width:768px) {
+                font-family: "Roboto";
+                font-size: 18px;
+                font-weight: 400;                
+            }
+        }    
 
         &-form {  
             box-sizing: border-box;
-            width: 535px;
-            margin-top: 25px;          
+            max-width: 535px;                      
             background-color: rgba(255, 255, 255, 0.2);
-            padding: 30px 27px;
+            padding: 40px 27px 0;
+            @media (max-width:768px) {
+                background-color: transparent;
+                              
+                
+            }
+
 
             &-title {
                 font-family: Roboto-Light;
                 font-size: 20px;
                 font-weight: 300;
-                line-height: 30px;  
+                line-height: 30px;
+                @media (max-width:768px) {
+                    font-family: "Roboto-Light";
+                    font-size: 15px;
+                    font-weight: 300;
+                    line-height: 18px;                    
+                }  
                 
                 &-important {
                     display: block;
@@ -81,11 +112,19 @@
                     font-weight: 700;
                     text-transform: uppercase;
                     margin-bottom: 20px;
+                    @media (max-width:768px) {                        
+                        font-weight: 700;
+                        margin-bottom: 15px;
+                        margin-top: 10px;
+                                           
+                    }  
                 
                 }
             }
 
             &-input {
+                
+
                 
                 &-tel {
                     font-family: Roboto-Light;
@@ -96,6 +135,16 @@
                     border: none;
                     margin-right: 10px;
                     width: 55%;
+                    @media (max-width:768px){
+                        font-size: 13px;
+                        font-weight: 300;
+                        margin-bottom:10px;
+                        width: 250px;
+                        padding: 15px 5px; 
+                        text-align: center;
+                         
+                    } 
+                        
                     &:focus {
                         outline: none; 
                     }
@@ -104,6 +153,9 @@
 
                 &-button {
                     padding: 20px;
+                    @media (max-width:768px){
+                        padding: 15px; 
+                    }
                 }
             }
 
@@ -111,7 +163,12 @@
                 font-family: Roboto-Light;
                 font-size: 14px;
                 font-weight: 300;
-                margin-top: 12px;                
+                margin-top: 12px;
+                @media (max-width:768px){
+                font-size: 13px;
+                font-weight: 300;
+                margin-bottom: 60px;
+                }
             }
 
         }

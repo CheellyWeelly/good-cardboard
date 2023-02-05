@@ -5,11 +5,22 @@ body {
 .container {
     max-width: 1200px;
     margin: auto;
+    padding: 0 10px;        
+    
+    @media (max-width:768px){
+        max-width: 340px;       
     }
+    
+    
+   
+}
 
 .header-nav {    
     background-color: #373737;
     margin: 0;
+    @media (max-width: 768px){
+        display: none;
+    }
 
     
     
@@ -39,7 +50,7 @@ body {
             &::after {
                 content: "";
                 display: block;
-                position: absolute;
+                position: relative;
                 right: -34px;
                 top: 14px;
                 width: 1px;
@@ -69,12 +80,32 @@ body {
 }
 .header {
     background: #ffffff;
-    margin: 15px 0;
+    margin: 15px ;
+    @media (max-width:768px){        
+               
+    }
 
     &__title { 
         display: flex;
         justify-content: space-between;            
         margin: 0;
+        @media (max-width:768px){
+            align-items: center;
+        }
+
+        &-logo {
+            background: url(../img/icon.png) center no-repeat;
+            background-size: 100%;
+            width: 191px;
+            height: 61px;
+            @media (max-width:768px){
+                background:#ff9d00 url(../img/img-mobile.png) center no-repeat;
+                width: 21px;
+                height: 16px;
+                padding: 10px;
+                border-radius: 5px;
+            }
+        }
 
         &-contacts {
             display: flex;
@@ -85,27 +116,48 @@ body {
             
             color: #373737;
 
-            &-phone {
-                margin-right: 30px;                
-
-                a {
-                    text-decoration: none;
-                    color: #373737;                    
+            &-phones {
+                display: flex;
+                @media (max-width:768px){
+                    display: block;
                 }
 
-                &:first-child {
-                    position: relative;
+                &-phone {
+                    margin-right: 30px;
+                    font-family: Roboto-Medium;
+                    font-size: 22px;
+                    font-weight: 500;
+                    @media (max-width:768px){
+                        font-size: 14px;
+                    }
+                    
 
-                    &::after {
-                        content: "";
-                        height: 100%;
-                        width: 1px;
-                        background-color: #6b6d73 ;
-                        position: absolute;
-                        right: -15px;
+    
+                    a {
+                        text-decoration: none;
+                        color: #373737;                    
+                    }
+    
+                    &:first-child {
+                        position: relative;
+                        
+    
+                        &::after {
+                            content: "";
+                            height: 100%;
+                            width: 1px;
+                            background-color: #6b6d73 ;
+                            position: absolute;
+                            right: -15px;
+                            @media (max-width:768px){
+                                display: none;
+                            }
+                        }
                     }
                 }
             }
+
+            
 
             &-button {
                 font-family: 'Roboto-Medium';
@@ -113,10 +165,23 @@ body {
                 font-weight: 500;
                 padding: 13px 22px; 
                 display: flex;                
-                align-items: center;              
+                align-items: center;
+                @media (max-width:768px){
+                    padding: 10px;
+                }              
                 
                 img {                    
                     margin-right: 5px;
+                    @media (max-width:768px){
+                        margin: 0;
+                    }
+                }
+
+                &-text {
+                    padding: 0;
+                    @media (max-width:768px){
+                        display: none;
+                    }
                 }
                 
             }
